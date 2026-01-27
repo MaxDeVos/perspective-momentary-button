@@ -125,7 +125,6 @@ Temporary Items
 ## File-based project format:
 *.ipr
 *.iws
-*.idea/*
 
 ## Plugin-specific files:
 
@@ -255,8 +254,6 @@ designer/out/
 
 # root dev ignores
 .gradle/
-.idea/
-build/
 
 # dynamically generated resources
 gateway/src/main/resources/mounted/js/RadComponents.js
@@ -267,15 +264,14 @@ gateway/src/main/resources/mounted/js/RadDesignComponents.js
 web/node_modules/
 web/.gradle
 web/build
-web/packages/client/.awcache
-web/packages/client/dist
-web/packages/client/node_modules
-web/packages/client/yarn-error.log
-web/packages/designer/.awcache
-web/packages/designer/dist
-web/packages/designer/node_modules
-web/packages/designer/yarn-error.log
+web/yarn.lock
 
+# web subproject package-level ignores
+web/packages/*/.awcache
+web/packages/*/dist
+web/packages/*/node_modules
+web/packages/*/yarn-error.log
+web/packages/**/yarn.lock
 
 Ignition-Build/
 
