@@ -24,10 +24,6 @@ ignitionModule {
     // name of the .modl file to build
     fileName.set("PerspectiveMomentaryButton")
 
-    // what is the name of the "root" gradle project for this module.  In this case, it"s "this", aka, the project
-    // specified as <repoPath>/perspective-component/build.gradle
-//        moduleRoot.set("perspective-momentary-button")
-
     // module xml configuration
     name.set("Perspective Momentary Button")
     id.set("org.imdc.perspective.momentarybutton")
