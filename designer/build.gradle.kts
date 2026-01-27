@@ -9,9 +9,20 @@ java {
 
 dependencies {
     compileOnly(project(":common"))
-    compileOnly("com.google.code.findbugs:jsr305:3.0.1")
-    compileOnly("com.inductiveautomation.ignitionsdk:designer-api:8.1.0")
-    compileOnly("com.inductiveautomation.ignitionsdk:perspective-common:8.1.0")
-    compileOnly("com.inductiveautomation.ignitionsdk:perspective-designer:8.1.0")
-    compileOnly("com.inductiveautomation.ignitionsdk:ignition-common:8.1.0")
+
+    compileOnly(
+        group = "com.inductiveautomation.ignitionsdk",
+        name = "designer-api",
+        version = "8.1.0")
+
+    compileOnly(
+        group = "com.inductiveautomation.ignitionsdk",
+        name = "perspective-designer",
+        version = "8.1.0")
+
+    compileOnly(
+        group = "com.google.code.findbugs",
+        name = "jsr305",
+        version = "3.0.1"
+    )
 }
