@@ -97,9 +97,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ({
 
 /***/ "../../node_modules/bind-decorator/index.js":
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/travis.cox/Documents/GitHub/perspective-momentary-button/web/node_modules/bind-decorator/index.js ***!
-  \******************************************************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** C:/Workspace/Ignition/perspective-momentary-button/web/node_modules/bind-decorator/index.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -136,9 +136,9 @@ exports.default = bind;
 /***/ }),
 
 /***/ "../../node_modules/classnames/index.js":
-/*!**************************************************************************************************************!*\
-  !*** C:/Users/travis.cox/Documents/GitHub/perspective-momentary-button/web/node_modules/classnames/index.js ***!
-  \**************************************************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** C:/Workspace/Ignition/perspective-momentary-button/web/node_modules/classnames/index.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

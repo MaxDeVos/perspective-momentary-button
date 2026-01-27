@@ -14,7 +14,7 @@ node {
 }
 
 //// define a variable that describes the path to the mounted gateway folder, where we want to put things eventually
-String  mountedJsDir= "$project.parent.projectDir/gateway/src/main/resources/mounted"
+String mountedJsDir= "$project.parent.projectDir/gateway/src/main/resources/mounted"
 
 // define a gradle task that will install our npm dependencies, extends the YarnTask provided by the node gradle plugin
 task yarnPackages(type: YarnTask) {

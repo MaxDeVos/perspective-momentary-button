@@ -23,6 +23,7 @@ buildscript {
 
 plugins {
     id "base"
+    id("io.ia.sdk.modl") version("0.1.1")
 }
 
 version "1.0.3"
@@ -30,42 +31,35 @@ group "org.imdc"
 
 
 allprojects {
-    apply plugin: "ignition-module-plugin"
 
     ignitionModule {
         // name of the .modl file to build
-        fileName "PerspectiveMomentaryButton"
+        fileName = "PerspectiveMomentaryButton"
 
         // what is the name of the "root" gradle project for this module.  In this case, it"s "this", aka, the project
         // specified as <repoPath>/perspective-component/build.gradle
-        moduleRoot "perspective-momentary-button"
+//        moduleRoot = "perspective-momentary-button"
 
         // module xml configuration
-        moduleName "Perspective Momentary Button"
-        moduleId "org.imdc.perspective.momentarybutton"
-        moduleVersion "${project.version}"
-        moduleDescription "The module provides a Perspective momentary button component"
-        requiredIgnitionVersion "8.1.0"
-        requiredFrameworkVersion "8"
-        isFree true
-        license "license.html"
-        moduleDependencies = [
-                [scope: "G", moduleId: "com.inductiveautomation.perspective"],
-                [scope: "D", moduleId: "com.inductiveautomation.perspective"]
-        ]
+        name = "Perspective Momentary Button"
+        id = "org.imdc.perspective.momentarybutton"
+        moduleVersion = "${project.version}"
+        moduleDescription = "The module provides a Perspective momentary button component"
+        requiredIgnitionVersion = "8.1.0"
+        requiredFrameworkVersion = "8"
+//        isFree true
+        license = "license.html"
+        moduleDependencies.put("com.inductiveautomation.perspective", "DG")
         // map our projects to the scopes their jars should apply.  Web isn't here because its assets are moved
         // into the gateway resource folder as part of the module's build
-        projectScopes = [
-                [name: "gateway", scope: "G"],
-                [name: "designer", scope: "D"],
-                [name: "common", scope: "GD"]
-        ]
+        projectScopes.put(":gateway", "G")
+        projectScopes.put(":designer", "D")
+        projectScopes.put(":common", "GD")
 
-        hooks = [
-                [scope: "G", hookClass: "org.imdc.perspective.momentarybutton.gateway.GatewayHook"],
-                [scope: "D", hookClass: "org.imdc.perspective.momentarybutton.designer.DesignerHook"]
-        ]
+        hooks.put("org.imdc.perspective.momentarybutton.gateway.GatewayHook", "G")
+        hooks.put("org.imdc.perspective.momentarybutton.designer.DesignerHook", "D")
 
+        skipModlSigning = true
     }
 
     if (project.plugins.hasPlugin("java")) {
