@@ -9,7 +9,7 @@ plugins {
 // configurations on which versions of Node, Npm, and Yarn the gradle build should use.  Configuration provided by/to
 // the gradle node plugin that's applied above (com.github.node-gradle.node)
 node {
-    version.set("10.18.1")
+    version.set("20.20.0")
     yarnVersion.set("1.22.4")
     npmVersion.set("6.4.1")
     download.set(true)
