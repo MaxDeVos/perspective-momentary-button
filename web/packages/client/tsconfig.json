@@ -21,7 +21,6 @@
         "noImplicitReturns": false,
         "noImplicitAny": false,
         "esModuleInterop": true,
-        "suppressImplicitAnyIndexErrors": true,
         "noUnusedLocals": true,
         "outDir": "dist/",
         "pretty": true,
