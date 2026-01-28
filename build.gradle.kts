@@ -2,7 +2,7 @@ import java.util.concurrent.TimeUnit
 
 plugins {
     base
-    id("io.ia.sdk.modl") version("0.1.1")
+    id("io.ia.sdk.modl") version("0.5.0")
 }
 
 subprojects {
