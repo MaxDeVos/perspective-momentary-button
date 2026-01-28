@@ -3,8 +3,8 @@ plugins {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 dependencies {
@@ -13,10 +13,15 @@ dependencies {
     compileOnly(
         group = "com.inductiveautomation.ignitionsdk",
         name = "gateway-api",
-        version = "8.1.0")
+        version = "8.3.0")
+
+    compileOnly(
+        group = "com.inductiveautomation.ignitionsdk",
+        name = "perspective-common",
+        version = "8.3.0")
 
     compileOnly(
         group = "com.inductiveautomation.ignitionsdk",
         name = "perspective-gateway",
-        version = "8.1.0")
+        version = "8.3.0")
 }

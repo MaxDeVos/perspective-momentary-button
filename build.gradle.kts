@@ -29,7 +29,7 @@ ignitionModule {
     id.set("org.imdc.perspective.momentarybutton")
     moduleVersion.set("${project.version}")
     moduleDescription.set("The module provides a Perspective momentary button component")
-    requiredIgnitionVersion.set("8.1.0")
+    requiredIgnitionVersion.set("8.3.0")
     requiredFrameworkVersion.set("8")
     freeModule.set(true)
     license.set("license.html")
