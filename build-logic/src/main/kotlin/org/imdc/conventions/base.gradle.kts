@@ -7,7 +7,7 @@ plugins {
     alias(libs.plugins.spotless)
 }
 
-group = "org.imdc.perspective-momentary-button"
+group = "org.imdc.perspective.momentarybutton"
 
 repositories {
     maven("https://nexus.inductiveautomation.com/repository/public/")
