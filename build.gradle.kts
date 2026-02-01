@@ -28,7 +28,7 @@ ignitionModule {
     name.set("Perspective Momentary Button")
     id.set("org.imdc.perspective.momentarybutton")
     moduleVersion.set("${project.version}")
-    moduleDescription.set("The module provides a Perspective momentary button component")
+    moduleDescription.set("A momentary button component for Perspective")
     requiredIgnitionVersion.set("8.3.0")
     requiredFrameworkVersion.set("8")
     freeModule.set(true)
@@ -43,19 +43,15 @@ ignitionModule {
 
     // map our projects to the scopes their jars should apply.  Web isn't here because its assets are moved
     // into the gateway resource folder as part of the module's build
-    projectScopes.putAll(
-        mapOf(
-            ":gateway" to "G",
-            ":designer" to "D",
-            ":common" to "GD"
-        )
+    projectScopes = mapOf(
+        ":gateway" to IgnitionScope.GATEWAY.code,
+        ":designer" to IgnitionScope.DESIGNER.code,
+        ":common" to IgnitionScope.GATEWAY_DESIGNER.code
     )
 
-    hooks.putAll(
-        mapOf(
-            "org.imdc.perspective.momentarybutton.gateway.GatewayHook" to "G",
-            "org.imdc.perspective.momentarybutton.designer.DesignerHook" to "D"
-        )
+    hooks = mapOf(
+        "org.imdc.perspective.momentarybutton.gateway.GatewayHook" to IgnitionScope.GATEWAY.code,
+        "org.imdc.perspective.momentarybutton.designer.DesignerHook" to IgnitionScope.DESIGNER.code,
     )
 
     skipModlSigning.set(true)
