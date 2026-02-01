@@ -1,0 +1,29 @@
+[versions]
+java = "17"
+ignition = "8.3.2"
+
+[plugins]
+modl = { id = "io.ia.sdk.modl", version = "0.5.0" }
+spotless = { id = "com.diffplug.spotless", version = "8.0.0" }
+
+[libraries]
+ignition-common = { group = "com.inductiveautomation.ignitionsdk", name = "ignition-common", version.ref = "ignition" }
+ignition-gateway-api = { group = "com.inductiveautomation.ignitionsdk", name = "gateway-api", version.ref = "ignition" }
+ignition-designer-api = { group = "com.inductiveautomation.ignitionsdk", name = "designer-api", version.ref = "ignition" }
+perspective-common = { group = "com.inductiveautomation.ignitionsdk", name = "perspective-common", version.ref = "ignition" }
+perspective-gateway = { group = "com.inductiveautomation.ignitionsdk", name = "perspective-gateway", version.ref = "ignition" }
+perspective-designer = { group = "com.inductiveautomation.ignitionsdk", name = "perspective-designer", version.ref = "ignition" }
+
+[bundles]
+common = [
+    "ignition-common",
+    "perspective-common"
+]
+gateway = [
+    "ignition-gateway-api",
+    "perspective-gateway",
+]
+designer = [
+    "ignition-designer-api",
+    "perspective-designer",
+]
