@@ -1,21 +1,20 @@
-// this file configures settings for the gradle build tools, as well as the project structure.
-// Generally this doesn't need to be altered unless you are adding/removing sub-projects.
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 rootProject.name = "perspective-momentary-button"
 
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        maven("https://nexus.inductiveautomation.com/repository/public/")
+        maven("https://nexus.inductiveautomation.com/repository/public")
+    }
+    plugins{
+        id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
     }
 }
 
-dependencyResolutionManagement {
-    repositories {
-        maven("https://nexus.inductiveautomation.com/repository/public/")
-    }
-}
-
-// link up our subprojects as part of this multi-project build.  Add/remove subprojects gradle path notation.
+includeBuild(
+    "build-logic"
+)
 include(
     ":common",
     ":gateway",
