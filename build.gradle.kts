@@ -1,24 +1,11 @@
-import java.util.concurrent.TimeUnit
+import io.ia.sdk.gradle.modl.model.IgnitionScope
 
 plugins {
-    base
-    id("io.ia.sdk.modl") version("0.5.0")
+    id("org.imdc.conventions.base")
+    alias(libs.plugins.modl)
 }
 
-subprojects {
-    // cascade version, which will be set at command line in CI, down to subprojects
-    version = "1.0.3"
-    group = "org.imdc"
-}
-
-allprojects {
-    // check for new versions of dependencies more frequently than default 24 hours.
-    configurations.configureEach({
-        resolutionStrategy {
-            cacheChangingModulesFor(30, TimeUnit.SECONDS)
-        }
-    })
-}
+version = "1.0.3"
 
 ignitionModule {
     // name of the .modl file to build

@@ -4,11 +4,9 @@ import com.inductiveautomation.ignition.common.jsonschema.JsonSchema;
 import com.inductiveautomation.perspective.common.api.ComponentDescriptor;
 import com.inductiveautomation.perspective.common.api.ComponentDescriptorImpl;
 import com.inductiveautomation.perspective.common.api.ComponentEventDescriptor;
-import org.imdc.perspective.momentarybutton.common.Components;
-
-import javax.swing.*;
 import java.util.Arrays;
-
+import javax.swing.*;
+import org.imdc.perspective.momentarybutton.common.Components;
 
 /**
  * Describes the component to the Java registry so the gateway and designer know to look for the front end elements.
@@ -19,7 +17,10 @@ public class MomentaryButton {
     // unique ID of the component which perfectly matches that provided in the javascript's ComponentMeta implementation
     public static String COMPONENT_ID = "imdc.perspective.momentarybutton";
 
-    public static ComponentEventDescriptor ON_ACTION_PERFORMED = new ComponentEventDescriptor("onActionPerformed", "Fires when the button is activated", JsonSchema.parse(Components.class.getResourceAsStream("/momentarybutton.event.empty.json")));
+    public static ComponentEventDescriptor ON_ACTION_PERFORMED = new ComponentEventDescriptor(
+            "onActionPerformed",
+            "Fires when the button is activated",
+            JsonSchema.parse(Components.class.getResourceAsStream("/momentarybutton.event.empty.json")));
 
     /**
      * The schema provided with the component descriptor. Use a schema instead of a plain JsonObject because it gives
@@ -44,5 +45,4 @@ public class MomentaryButton {
             .setDefaultMetaName("momentarybutton")
             .setResources(Components.BROWSER_RESOURCES)
             .build();
-
 }

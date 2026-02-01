@@ -2,7 +2,7 @@ import com.github.gradle.node.yarn.task.YarnTask
 import com.github.gradle.node.npm.task.NpmTask
 
 plugins {
-    id("base")
+    id("org.imdc.conventions.modl-web-component")
     id("com.github.node-gradle.node") version("3.2.1")
 }
 
