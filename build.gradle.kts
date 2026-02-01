@@ -34,11 +34,12 @@ ignitionModule {
     freeModule.set(true)
     license.set("license.html")
 
-    moduleDependencies.putAll(
-        mapOf(
-            "com.inductiveautomation.perspective" to "DG"
-        )
-    )
+    moduleDependencySpecs {
+        register("com.inductiveautomation.perspective"){
+            scope = "GD"
+            required = true
+        }
+    }
 
     // map our projects to the scopes their jars should apply.  Web isn't here because its assets are moved
     // into the gateway resource folder as part of the module's build
