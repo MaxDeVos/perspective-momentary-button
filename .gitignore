@@ -255,10 +255,6 @@ designer/out/
 # root dev ignores
 .gradle/
 
-# dynamically generated resources
-gateway/src/main/resources/mounted/js/RadComponents.js
-gateway/src/main/resources/mounted/js/RadDesignComponents.js
-
 
 # web subproject ignores
 web/node_modules/
@@ -277,5 +273,6 @@ Ignition-Build/
 
 private/
 sign.props
-gateway/src/main/resources/mounted/RadComponents.css
-gateway/src/main/resources/mounted/RadComponents.js
+
+# dynamically generated resources
+gateway/src/main/resources/mounted/**
