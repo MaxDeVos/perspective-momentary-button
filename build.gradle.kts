@@ -9,7 +9,7 @@ version = "1.0.3"
 
 ignitionModule {
     // name of the .modl file to build
-    fileName.set("PerspectiveMomentaryButton")
+    fileName.set("PerspectiveMomentaryButton-module")
 
     // module xml configuration
     name.set("Perspective Momentary Button")
